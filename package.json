@@ -1,7 +1,7 @@
 {
     "name": "iot-course-payment-system",
     "version": "1.0.0",
-    "description": "Payment system for IoT Embedded Systems Design Course with Stripe integration",
+    "description": "Payment system for IoT Embedded Systems Design Course with PayPal integration",
     "main": "server.js",
     "scripts": {
         "start": "node server.js",
@@ -9,7 +9,7 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [
-        "stripe",
+        "paypal",
         "payment",
         "iot",
         "course",
@@ -20,7 +20,6 @@
     "license": "MIT",
     "dependencies": {
         "express": "^4.18.2",
-        "stripe": "^13.11.0",
         "cors": "^2.8.5",
         "dotenv": "^16.3.1"
     },
