@@ -442,145 +442,6 @@
         .validation-message.active {
             display: block;
         }
-
-        /* Transaction Details Styles */
-        .transaction-details {
-            background: rgba(64, 224, 208, 0.1);
-            border: 1px solid rgba(64, 224, 208, 0.2);
-            border-radius: 16px;
-            padding: 25px;
-            margin: 25px 0;
-            text-align: left;
-        }
-
-        .transaction-details h3 {
-            color: #40e0d0;
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-            text-align: center;
-        }
-
-        .detail-grid {
-            display: grid;
-            gap: 12px;
-        }
-
-        .detail-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .detail-row:last-child {
-            border-bottom: none;
-        }
-
-        .detail-label {
-            font-weight: 500;
-            color: rgba(255, 255, 255, 0.8);
-            flex: 1;
-        }
-
-        .detail-value {
-            font-weight: 600;
-            color: white;
-            flex: 1;
-            text-align: right;
-            word-break: break-word;
-        }
-
-        .status-completed {
-            color: #40e0d0 !important;
-            font-weight: 700;
-        }
-
-        .next-steps {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            padding: 25px;
-            margin: 25px 0;
-        }
-
-        .next-steps h3 {
-            color: #40e0d0;
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-            text-align: center;
-        }
-
-        .steps-list {
-            display: grid;
-            gap: 15px;
-        }
-
-        .step-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 12px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-        }
-
-        .step-item i {
-            color: #40e0d0;
-            font-size: 1.2rem;
-            width: 20px;
-            text-align: center;
-        }
-
-        .step-item span {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .action-buttons {
-            display: flex;
-            gap: 10px;
-            margin-top: 25px;
-            flex-wrap: wrap;
-        }
-
-        .action-buttons .pay-button {
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .pay-button.primary {
-            background: linear-gradient(135deg, #40e0d0, #48cae4);
-            color: #000;
-        }
-
-        .pay-button.secondary {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
-        }
-
-        .pay-button.secondary:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        @media (max-width: 768px) {
-            .action-buttons {
-                flex-direction: column;
-            }
-
-            .action-buttons .pay-button {
-                min-width: auto;
-            }
-
-            .detail-row {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 5px;
-            }
-
-            .detail-value {
-                text-align: left;
-            }
-        }
     </style>
 </head>
 
@@ -709,83 +570,11 @@
                         <i class="fas fa-check"></i>
                     </div>
                     <h2>Payment Successful!</h2>
-                    <p>Thank you for your purchase. Your transaction has been completed successfully.</p>
-
-                    <!-- Transaction Details -->
-                    <div class="transaction-details">
-                        <h3>Transaction Details</h3>
-                        <div class="detail-grid">
-                            <div class="detail-row">
-                                <span class="detail-label">Transaction ID:</span>
-                                <span class="detail-value" id="txn-id">--</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-label">Order ID:</span>
-                                <span class="detail-value" id="order-id">--</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-label">Payer ID:</span>
-                                <span class="detail-value" id="payer-id">--</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-label">Payment Method:</span>
-                                <span class="detail-value" id="payment-method">PayPal</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-label">Amount Paid:</span>
-                                <span class="detail-value" id="amount-paid">--</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-label">Currency:</span>
-                                <span class="detail-value" id="currency">USD</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-label">Customer Name:</span>
-                                <span class="detail-value" id="customer-name">--</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-label">Email Address:</span>
-                                <span class="detail-value" id="customer-email">--</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-label">Payment Date:</span>
-                                <span class="detail-value" id="payment-date">--</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-label">Status:</span>
-                                <span class="detail-value status-completed" id="payment-status">COMPLETED</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="next-steps">
-                        <h3>What's Next?</h3>
-                        <div class="steps-list">
-                            <div class="step-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>Check your email for the course access details</span>
-                            </div>
-                            <div class="step-item">
-                                <i class="fas fa-graduation-cap"></i>
-                                <span>Access your IoT Embedded Systems Design Course</span>
-                            </div>
-                            <div class="step-item">
-                                <i class="fas fa-book"></i>
-                                <span>Download 50 bonus eBooks included with your purchase</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="action-buttons">
-                        <button class="pay-button primary"
-                            onclick="window.open('https://3diot.vn/course-access', '_blank')"
-                            style="margin-right: 10px;">
-                            <i class="fas fa-rocket"></i> Access Course Now
-                        </button>
-                        <button class="pay-button secondary" onclick="history.back()">
-                            <i class="fas fa-arrow-left"></i> Return to Course Page
-                        </button>
-                    </div>
+                    <p>Thank you for your purchase. You will receive a confirmation email shortly with your course
+                        access details.</p>
+                    <button class="pay-button" onclick="history.back()" style="margin-top: 20px;">
+                        Return to Course Page
+                    </button>
                 </div>
 
                 <!-- Error Message -->
@@ -873,30 +662,14 @@
                         if (response.ok) {
                             // Send confirmation email
                             sendConfirmationEmail(email, name, data.orderID);
-                            // Pass both PayPal details and our form data to showSuccess
-                            // showSuccess({
-                            //     ...details,
-                            //     orderID: data.orderID,
-                            //     customer_email: email,
-                            //     customer_name: name,
-                            //     amount: 99.00,
-                            //     currency: 'USD'
-                            // });
+                            showSuccess();
                         } else {
                             throw new Error('Server error processing payment');
                         }
                     } catch (error) {
-                        // console.error('Error processing payment:', error);
-                        // showError('Payment completed but there was an error processing your order. Please contact support.');
-                        // hideLoading();
-                        showSuccess({
-                            ...details,
-                            orderID: data.orderID,
-                            customer_email: email,
-                            customer_name: name,
-                            amount: 99.00,
-                            currency: 'USD'
-                        });
+                        console.error('Error processing payment:', error);
+                        showError('Payment completed but there was an error processing your order. Please contact support.');
+                        hideLoading();
                     }
                 });
             },
@@ -969,10 +742,9 @@
             document.getElementById('loading').classList.remove('active');
         }
 
-        function showSuccess(transactionData) {
+        function showSuccess() {
             document.getElementById('loading').classList.remove('active');
             document.getElementById('success').classList.add('active');
-            populateTransactionDetails(transactionData);
         }
 
         function showError(message) {
@@ -981,38 +753,6 @@
             setTimeout(() => {
                 document.getElementById('error').classList.remove('active');
             }, 7000);
-        }
-
-        // Populate transaction details in success screen
-        function populateTransactionDetails(transactionData) {
-            // Safely extract data with fallbacks
-            const paymentId = transactionData.id || 'N/A';
-            const orderId = transactionData.orderID || 'N/A';
-            const payerId = transactionData.payer?.payer_id || 'N/A';
-            const payerEmail = transactionData.payer?.email_address || transactionData.customer_email || 'N/A';
-            const payerName = transactionData.customer_name ||
-                (transactionData.payer?.name ?
-                    `${transactionData.payer.name.given_name || ''} ${transactionData.payer.name.surname || ''}`.trim() : 'N/A');
-            const amount = transactionData.amount ||
-                (transactionData.purchase_units?.[0]?.amount?.value || '99.00');
-            const currency = transactionData.currency ||
-                (transactionData.purchase_units?.[0]?.amount?.currency_code || 'USD');
-            const paymentDate = transactionData.create_time ?
-                new Date(transactionData.create_time).toLocaleString() :
-                new Date().toLocaleString();
-            const status = transactionData.status || 'COMPLETED';
-
-            // Update transaction details
-            document.getElementById('txn-id').textContent = paymentId;
-            document.getElementById('order-id').textContent = orderId;
-            document.getElementById('payer-id').textContent = payerId;
-            document.getElementById('payment-method').textContent = 'PayPal (' + payerEmail + ')';
-            document.getElementById('amount-paid').textContent = '$' + amount;
-            document.getElementById('currency').textContent = currency;
-            document.getElementById('customer-name').textContent = payerName;
-            document.getElementById('customer-email').textContent = payerEmail;
-            document.getElementById('payment-date').textContent = paymentDate;
-            document.getElementById('payment-status').textContent = status;
         }
 
         // Real-time validation for form fields
@@ -1030,8 +770,6 @@
                 showFieldSuccess('fullName');
             }
         });
-
-
     </script>
 </body>
 
