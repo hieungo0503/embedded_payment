@@ -10,10 +10,8 @@
 
 # HTTPS on custom port 8443
 3diot.vn:8443 {
-    # Manually enable TLS for this site
-    tls {
-        # Let's Encrypt will automatically get certificates
-    }
+    # TLS is automatically enabled for domains (Let's Encrypt certificates)
+    # No need for explicit tls directive
     
     # Security headers for production
     header {
