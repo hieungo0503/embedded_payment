@@ -73,10 +73,10 @@ www.3diot.vn:8443 {
     redir https://3diot.vn:8443{uri} permanent
 }
 
-# Optional: HTTP redirect (if you want to handle HTTP on port 8080)
-3diot.vn:8080 {
-    redir https://3diot.vn:8443{uri} permanent
-}
+# # Optional: HTTP redirect (if you want to handle HTTP on port 8080)
+# 3diot.vn:8080 {
+#     redir https://3diot.vn:8443{uri} permanent
+# }
 
 # Optional: Handle other subdomains (if needed)
 # api.3diot.vn {
