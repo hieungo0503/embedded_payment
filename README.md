@@ -122,6 +122,8 @@ course_pay/
 ├── DEPLOYMENT.md       # Path-based deployment guide
 ├── PORT_CONFIGURATION.md # Running alongside existing web servers
 ├── docker-caddy-config.md # Integrating with Docker Caddy
+├── DOCKER_CADDY_TROUBLESHOOTING.md # Docker Caddy issues & fixes
+├── RATE_LIMIT_TROUBLESHOOTING.md # Let's Encrypt rate limit fixes
 └── README.md           # This file
 ```
 
@@ -155,6 +157,8 @@ Accept payments from customers in:
 - **HTTPS setup:** `CADDY_SETUP.md`
 - **Path deployment:** `DEPLOYMENT.md`
 - **Port conflicts:** `PORT_CONFIGURATION.md`
+- **Docker Caddy issues:** `DOCKER_CADDY_TROUBLESHOOTING.md`
+- **Rate limit issues:** `RATE_LIMIT_TROUBLESHOOTING.md`
 
 🔧 **Common Setup Steps:**
 1. Create PayPal Business account (free)
