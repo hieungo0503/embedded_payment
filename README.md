@@ -48,9 +48,11 @@ Your course will be available at: **`https://3diot.vn/embedded-course/`**
    sudo caddy run --config Caddyfile
    ```
 
-5. **Access your site:** `https://3diot.vn/embedded-course/`
+5. **Access your site:** 
+   - **Custom ports:** `https://3diot.vn:8443/embedded-course/` (automatic HTTPS)
+   - **Standard ports:** `https://3diot.vn/embedded-course/` (via Docker Caddy)
 
-**⚠️ Port conflict?** If ports 80/443 are already in use, see `PORT_CONFIGURATION.md` for solutions.
+**⚠️ Port conflict?** Your Caddyfile is configured for **automatic HTTPS on custom ports** to work alongside Docker Caddy. See `PORT_CONFIGURATION.md` for other solutions.
 
 ✅ **Automatic SSL certificates** with Let's Encrypt  
 ✅ **Auto-renewal** - certificates renew automatically  
@@ -119,6 +121,7 @@ course_pay/
 ├── CADDY_SETUP.md      # HTTPS setup with Caddy guide
 ├── DEPLOYMENT.md       # Path-based deployment guide
 ├── PORT_CONFIGURATION.md # Running alongside existing web servers
+├── docker-caddy-config.md # Integrating with Docker Caddy
 └── README.md           # This file
 ```
 
