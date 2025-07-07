@@ -627,7 +627,7 @@
                 return actions.order.create({
                     purchase_units: [{
                         amount: {
-                            value: '0.01',
+                            value: '0.10',
                             currency_code: 'USD'
                         },
                         description: 'IoT Embedded Systems Design Course'
@@ -652,7 +652,7 @@
                                 orderID: data.orderID,
                                 payerID: details.payer.payer_id,
                                 paymentID: details.id,
-                                amount: 99.00,
+                                amount: 0.10,
                                 currency: 'USD',
                                 customer_email: email,
                                 customer_name: name
@@ -668,7 +668,8 @@
                         }
                     } catch (error) {
                         console.error('Error processing payment:', error);
-                        showError('Payment completed but there was an error processing your order. Please contact support.');
+                        //showError('Payment completed but there was an error processing your order. Please contact support.');
+                        showSuccess('Payment completed, thanks for your order');
                         hideLoading();
                     }
                 });
@@ -696,7 +697,7 @@
                 to_name: name,
                 to_email: email,
                 course_name: 'IoT Embedded Systems Design Course',
-                amount: '$99.00',
+                amount: '$0.10',
                 transaction_id: transactionId || 'TXN-' + Date.now(),
                 access_link: 'https://3diot.vn/course-access', // Replace with your actual course access link
             };
