@@ -1,0 +1,22 @@
+[Unit]
+Description=IoT Course Payment Server
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/path/to/course_pay
+ExecStart=/usr/bin/node server.js
+Restart=always
+RestartSec=10
+Environment=NODE_ENV=production
+Environment=PORT=3000
+Environment=BASE_PATH=/embedded-course
+
+# Logging
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=course-payment
+
+[Install]
+WantedBy=multi-user.target 
