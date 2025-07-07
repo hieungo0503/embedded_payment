@@ -30,11 +30,11 @@
     # Gzip compression for better performance
     encode gzip
     
-    # Logging for monitoring
-    log {
-        output file /var/log/caddy/3diot.vn.log
-        format single_field common_log
-    }
+    # # Logging for monitoring
+    # log {
+    #     output file /var/log/caddy/3diot.vn.log
+    #     format single_field common_log
+    # }
     
     # Handle the embedded-course path and its sub-routes
     handle_path /embedded-course* {
