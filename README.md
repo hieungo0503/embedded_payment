@@ -50,6 +50,8 @@ Your course will be available at: **`https://3diot.vn/embedded-course/`**
 
 5. **Access your site:** `https://3diot.vn/embedded-course/`
 
+**⚠️ Port conflict?** If ports 80/443 are already in use, see `PORT_CONFIGURATION.md` for solutions.
+
 ✅ **Automatic SSL certificates** with Let's Encrypt  
 ✅ **Auto-renewal** - certificates renew automatically  
 ✅ **Production security headers** included  
@@ -116,6 +118,7 @@ course_pay/
 ├── PAYMENT_SETUP.md    # Detailed PayPal setup guide
 ├── CADDY_SETUP.md      # HTTPS setup with Caddy guide
 ├── DEPLOYMENT.md       # Path-based deployment guide
+├── PORT_CONFIGURATION.md # Running alongside existing web servers
 └── README.md           # This file
 ```
 
@@ -148,6 +151,7 @@ Accept payments from customers in:
 - **PayPal setup:** `PAYMENT_SETUP.md`
 - **HTTPS setup:** `CADDY_SETUP.md`
 - **Path deployment:** `DEPLOYMENT.md`
+- **Port conflicts:** `PORT_CONFIGURATION.md`
 
 🔧 **Common Setup Steps:**
 1. Create PayPal Business account (free)
