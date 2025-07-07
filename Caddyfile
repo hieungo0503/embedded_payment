@@ -1,12 +1,19 @@
 # Caddyfile for 3diot.vn PayPal Payment System
 # This file configures Caddy to serve your website over HTTPS at /embedded-course path
+# Uses custom ports to avoid conflicts with existing web servers
 
-# Main domain configuration with custom ports
+# Global options to prevent automatic port binding
+{
+    # Disable automatic HTTPS on standard ports
+    auto_https off
+}
+
+# HTTPS on custom port 8443
 3diot.vn:8443 {
-    # Listen on custom ports to avoid conflicts
-    # Access at: https://3diot.vn:8443/embedded-course/
-    # Enable automatic HTTPS (Caddy handles SSL certificates)
-    # Caddy will automatically obtain and renew Let's Encrypt certificates
+    # Manually enable TLS for this site
+    tls {
+        # Let's Encrypt will automatically get certificates
+    }
     
     # Security headers for production
     header {
@@ -68,17 +75,13 @@
     }
 }
 
-# Redirect www subdomain to main domain with custom port
-www.3diot.vn:8443 {
+# HTTP on custom port 8080 (optional - for redirects)
+3diot.vn:8080 {
+    # Redirect HTTP to HTTPS on custom port
     redir https://3diot.vn:8443{uri} permanent
 }
 
-# # Optional: HTTP redirect (if you want to handle HTTP on port 8080)
-# 3diot.vn:8080 {
-#     redir https://3diot.vn:8443{uri} permanent
-# }
-
 # Optional: Handle other subdomains (if needed)
-# api.3diot.vn {
+# api.3diot.vn:8443 {
 #     reverse_proxy localhost:3001
 # } 
