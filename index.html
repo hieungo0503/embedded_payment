@@ -875,7 +875,8 @@
         // Checkout button functionality
         document.getElementById('checkout-button').addEventListener('click', function () {
             // Redirect to PayPal checkout page
-            window.location.href = 'checkout.html';
+            const basePath = window.location.pathname.includes('/embedded-course') ? '/embedded-course' : '';
+            window.location.href = basePath + '/checkout';
         });
 
         // Create floating particles

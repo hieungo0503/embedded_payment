@@ -452,7 +452,7 @@
         <div class="checkout-wrapper">
             <!-- Order Summary -->
             <div class="order-summary">
-                <a href="index.html" class="back-link">
+                <a href="javascript:history.back()" class="back-link">
                     <i class="fas fa-arrow-left"></i>
                     Back to Course Details
                 </a>
@@ -572,8 +572,8 @@
                     <h2>Payment Successful!</h2>
                     <p>Thank you for your purchase. You will receive a confirmation email shortly with your course
                         access details.</p>
-                    <button class="pay-button" onclick="window.location.href='index.html'" style="margin-top: 20px;">
-                        Return to Homepage
+                    <button class="pay-button" onclick="history.back()" style="margin-top: 20px;">
+                        Return to Course Page
                     </button>
                 </div>
 
@@ -642,7 +642,8 @@
                         const name = document.getElementById('fullName').value;
 
                         // Send payment success to server
-                        const response = await fetch('/paypal-payment-success', {
+                        const basePath = window.location.pathname.includes('/embedded-course') ? '/embedded-course' : '';
+                        const response = await fetch(basePath + '/paypal-payment-success', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
